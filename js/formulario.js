@@ -38,7 +38,7 @@ function validarRegistro(e) {
             xhr.onload = function () {
                 if (this.status == 200) {
                     var  respuesta = JSON.parse(xhr.responseText);
-                    console.log(respuesta);
+                    // console.log(respuesta);
                     // si la respuesta es correcta
                     if (respuesta.respuesta ==='correcto') {
                         // si es un nuevo usuario 
@@ -53,7 +53,7 @@ function validarRegistro(e) {
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Login correcto',
-                                text: '´Presiona OK para abrir el dashboard'
+                                text: 'Presiona OK para abrir el dashboard'
                               }).then(result =>{
                                   if (result.value) {
                                       window.location.href='index.php';
@@ -67,8 +67,8 @@ function validarRegistro(e) {
                         // si hay un error 
                         Swal.fire({
                             icon: 'error',
-                            title: 'Hubo un error',
-                            text: 'error'
+                            title: 'Error',
+                            text: 'Hubo un error'
                               })        
                     }
                 }
