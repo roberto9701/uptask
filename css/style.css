@@ -1,10 +1,11 @@
+
 html {
-    box-sizing: border-box;
-    height: 100%;
-}
+ box-sizing: border-box;
+/* para usar la fuente en rems */
+/* font-size: 62.5%;*/ } 
 *, *:before, *:after {
-    box-sizing: inherit;
-}
+ box-sizing: inherit;
+ }
 
 body {
     font-family: 'Lato', sans-serif;
@@ -84,6 +85,8 @@ body {
 .campo a {
     color: black;
     text-decoration: none;
+    display: inline-block;
+    text-align: center!important;
 }
 /** Barra **/
 body.index {
@@ -222,4 +225,27 @@ body.index {
     text-align: center;
     color: white;
     font-size: 1.2rem;
+}
+
+/* bara de avance del proyecto  */
+
+.barra-avance{
+    height: 25px;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #f2f2f2; 
+}
+
+.porcentaje{
+    /* width: 50%; */
+    height: 100%;
+    background-color: green;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+    transition: width .5s ease;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    color: white;
 }

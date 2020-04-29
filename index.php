@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 include 'inc/funciones/sesiones.php';
 include 'inc/templates/header.php';
 include 'inc/templates/barra.php';
@@ -7,7 +8,7 @@ include 'inc/templates/barra.php';
 // echo "</pre>";
 // para cuando no hay ningun id en la url no mande advertencia 
 // para eliminar advertencias se puede usar 
-// error_reporting(E_ALL ^ E_NOTICE);
+
 $id_proyecto = null;
 // obtener el id de la URL 
 if (isset($_GET['id_proyecto'])) {
@@ -73,12 +74,18 @@ if (isset($_GET['id_proyecto'])) {
                         </li>
                 <?php endforeach;
                 } else {
-                    echo "<p>No hay tareas en este proyecto</p>";
+                    echo "<p class ='lista-vacia'>No hay tareas en este proyecto</p>";
                 }
 
                 ?>
 
             </ul>
+        </div>
+        <div class="avance">
+            <h2>Avance del proyecto: </h2>
+            <div id="barra-avance" class="barra-avance">
+                <div class="porcentaje" id="porcentaje"></div>
+            </div>
         </div>
     </main>
 </div>
