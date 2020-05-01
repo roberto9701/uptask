@@ -5,7 +5,7 @@
 
     <div class="panel lista-proyectos">
         <h2>Proyectos</h2>
-        <ul id="proyectos">
+        <ul id="proyectos" class="proyectos">
             <!-- este codigo se comunica directamente con php con la funcion obtener proyectos  -->
             <?php
             $proyectos = obtenerProyectos();
@@ -14,6 +14,7 @@
                     <li>
                         <a href="index.php?id_proyecto=<?php echo $proyecto['id'] ?>" id="proyecto:<?php echo $proyecto['id'] ?>">
                             <?php echo $proyecto['nombre'] ?>
+                            <i class="fas fa-trash"></i>
                         </a>
                     </li>
             <?php  }

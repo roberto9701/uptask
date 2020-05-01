@@ -9,7 +9,7 @@ include 'inc/templates/header.php';
 if (isset($_GET['cerrar_sesion'])) {
     $_SESSION = array();
 }
-var_dump($_SESSION);
+// var_dump($_SESSION);
 ?>
 
 

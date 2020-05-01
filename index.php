@@ -23,7 +23,7 @@ if (isset($_GET['id_proyecto'])) {
 <div class="contenedor">
 
     <?php include 'inc/templates/sidebar.php'; ?>
-    <main class="contenido-principal">
+    <main class="contenido-principal ocultar">
 
         <?php $proyecto = obtenerNombreProyecto($id_proyecto);
         if ($proyecto) : ?>
@@ -87,6 +87,7 @@ if (isset($_GET['id_proyecto'])) {
                 <div class="porcentaje" id="porcentaje"></div>
             </div>
         </div>
+
     </main>
 </div>
 <!--.contenedor-->
